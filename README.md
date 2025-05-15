@@ -137,7 +137,8 @@ Description=Eaton UPS Scraper (Gunicorn Flask Server)
 After=network.target
 
 [Service]
-WorkingDirectory=/opt/eaton-ups-scraper  # Change this to the path where your script is located
+# Change this to the path where your script is located
+WorkingDirectory=/opt/eaton-ups-scraper
 ExecStart=/usr/bin/gunicorn -b 0.0.0.0:5000 ups_scraper_server:app
 
 # Environment configuration
